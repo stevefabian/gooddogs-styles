@@ -1,0 +1,19 @@
+{
+  "name": "gooddogs-styles",
+  "version": "1.2.0",
+  "description": "gooddogs css shared classes for web components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevefabian/gooddogs-styles.git"
+  },
+  "author": "Steve Fabian <steve.fabian@adp.com> (http://cdlsil10:81)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevefabian/gooddogs-styles/issues"
+  },
+  "homepage": "https://github.com/stevefabian/gooddogs-styles#readme"
+}
