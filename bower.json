@@ -1,0 +1,9 @@
+{
+    "name": "gooddogs-styles",
+    "main": "gooddogs-styles.html",
+    "dependencies": {    
+        "polymer": "~2.2.0"
+    },
+    "devDependencies":{
+    }
+}

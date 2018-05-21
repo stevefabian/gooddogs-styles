@@ -1,0 +1,47 @@
+<link rel="import" href="./bower_components/polymer/polymer-element.html">
+
+<dom-module id='gooddogs-styles'>
+    <template>
+        <style>
+            :host {
+                font-family: var(--font-family, 'Arial,Helvetica');
+                font-size: var(--font-size, '14px');
+                color: var(--color, #000);
+            }
+        </style>
+        <div>
+            [[title]]<br />
+
+            <button class='vdl-button vdl-button--primary' 
+                    on-click='handleClick'>Handle Click</button>
+
+            <button class='vdl-button vdl-button--secondary' 
+                    on-click='raiseClickEvent'>Raise Click</button>
+        </div>
+    </template>
+    <script>
+        class GooddogsStylesComponent extends Polymer.Element {
+            static get is() { return 'gooddogs-styles'; }
+            static get properties() {
+                return {
+                    title: { type: String, value: 'Hello World' }
+                };
+            }
+            // handle the click within the web component
+            handleClick(e) {
+                alert('Handle Click clicked - in Web Component');
+            }
+            // don't handle the click here, just pass the click up
+            // to the parent through an event
+            raiseClickEvent(e) {
+                this.dispatchEvent(
+                    new CustomEvent('btn-click', { 
+                        detail: { button: 'Raise Click' } 
+                        }));
+            }
+        }
+        window.customElements.define(
+            GooddogsStylesComponent.is, 
+            GooddogsStylesComponent);
+    </script>
+</dom-module>
